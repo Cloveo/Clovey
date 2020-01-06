@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB5D5EE2-6CC7-4882-89E8-E816599F58CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClyUpdateClient</RootNamespace>
+    <AssemblyName>ClyUpdateClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>CSkin\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>obj\Debug\Interop.IWshRuntimeLibrary.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClyUpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClyUpdateClient.Designer.cs">
+      <DependentUpon>ClyUpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateClass\FileOperate.cs" />
+    <Compile Include="UpdateClass\INIClass.cs" />
+    <Compile Include="UpdateClass\ServerInfor.cs" />
+    <Compile Include="UpdateClass\SynFileInfo.cs" />
+    <Compile Include="UpdateClass\UpdateFileInfo.cs" />
+    <Compile Include="UpdateClass\VersionHelper.cs" />
+    <Compile Include="UpdateClass\XMLHelper.cs" />
+    <EmbeddedResource Include="ClyUpdateClient.resx">
+      <DependentUpon>ClyUpdateClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BackgroundImage.jpg" />
+    <None Include="Resources\tick1.png" />
+    <None Include="Resources\load1.gif" />
+    <None Include="Resources\hourglass_go1.png" />
+    <None Include="Resources\hourglass1.png" />
+    <None Include="Resources\cross1.png" />
+    <None Include="Resources\btn_mini_normal1.png" />
+    <None Include="Resources\btn_mini_highlight1.png" />
+    <None Include="Resources\btn_mini_down1.png" />
+    <None Include="Resources\btn_close_highlight1.png" />
+    <None Include="Resources\btn_close_down1.png" />
+    <None Include="Resources\btn_close_disable1.png" />
+    <None Include="Resources\BackgroundImage1.jpg" />
+    <Content Include="Resources\btn_close_disable.png" />
+    <Content Include="Resources\btn_close_down.png" />
+    <Content Include="Resources\btn_close_highlight.png" />
+    <Content Include="Resources\btn_mini_down.png" />
+    <Content Include="Resources\btn_mini_highlight.png" />
+    <Content Include="Resources\btn_mini_normal.png" />
+    <EmbeddedResource Include="Resources\cross.png" />
+    <EmbeddedResource Include="Resources\hourglass.png" />
+    <EmbeddedResource Include="Resources\hourglass_go.png" />
+    <EmbeddedResource Include="Resources\load.gif" />
+    <EmbeddedResource Include="Resources\tick.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
