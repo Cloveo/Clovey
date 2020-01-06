@@ -10,3 +10,15 @@ C:\Users\Jesus\Desktop\更新文件\ClyUpdateClient\ClyUpdateClient\ClyUpdateCli
 C:\Users\Jesus\Desktop\更新文件\ClyUpdateClient\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.exe
 C:\Users\Jesus\Desktop\更新文件\ClyUpdateClient\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.pdb
 C:\Users\Jesus\Desktop\更新文件\ClyUpdateClient\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.csprojAssemblyReference.cache
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\bin\Debug\ClyUpdateClient.exe
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\bin\Debug\ClyUpdateClient.pdb
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\bin\Debug\CSkin.dll
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\bin\Debug\CSkin.xml
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.csprojAssemblyReference.cache
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.ClyUpdateClient.resources
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.Properties.Resources.resources
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.csproj.GenerateResource.cache
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.csproj.CoreCompileInputs.cache
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.csproj.CopyComplete
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.exe
+I:\XXXXX\ClyUpdateClient\ClyUpdateClient\obj\Debug\ClyUpdateClient.pdb

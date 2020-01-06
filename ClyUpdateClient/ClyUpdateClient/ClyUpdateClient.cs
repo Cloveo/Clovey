@@ -48,8 +48,9 @@ namespace ClyUpdateClient
             localDoc = new XmlDocument();
             localDoc.Load(xmlPath);
             file = localDoc.SelectSingleNode("Config").ChildNodes;
-            dgvDownLoad.AllowUserToResizeRows = false;//是否允许调整行大小(默认：true)
         }
+
+        //  public static string GetIp { get; } = Dns.GetHostEntry(Dns.GetHostName()).AddressList.FirstOrDefault(p => p.AddressFamily.ToString() == "InterNetwork")?.ToString();
 
         public ClyUpdateClient(ServerInfor Infor)
             : this()
@@ -129,7 +130,7 @@ namespace ClyUpdateClient
                 List<ArrayList> arrayListList = new List<ArrayList>();
                 double size = 0;
                 double Totle = 0;
-                
+
                 for (int i = 0; i < this.infor.DownloadFileList.Count; i++)
                 {
                     size = Convert.ToDouble(this.infor.DownloadFileList[i].Size);
@@ -142,15 +143,17 @@ namespace ClyUpdateClient
                 lbl_SUM.Text = string.Format("文件：{0}/{1}", CON, SUM);
                 TotalSize = FileOperate.GetAutoSizeString(Totle, 2);
                 lbl_Size.Text = string.Format("大小：{0}/{1}", 0, TotalSize);
-                lbl_Wait.Visible = false;
+                string s = null;
                 foreach (ArrayList arrayList in arrayListList)
                 {
+                    s += (Convert.ToInt32(arrayList[1]) + 1).ToString() + "." + arrayList[2].ToString() + "。\n";
                     int rowIndex = dgvDownLoad.Rows.Add(arrayList.ToArray());
                     arrayList[3] = 0;
                     arrayList.Add(dgvDownLoad.Rows[rowIndex]);
                     //取出列表中的行信息保存列表集合(m_SynFileInfoList)中
                     m_SynFileInfoList.Add(new SynFileInfo(arrayList.ToArray()));
                 }
+                lbl_show.Text = s;
                 lbl_Info.Text = string.Format("发布最新版本：{0}\n优化内容：\n{1}", this.version, this.remark);
             }
             catch (Exception ex)
@@ -420,8 +423,8 @@ namespace ClyUpdateClient
                         {
                             Icon ic = this.Icon;
                             Bitmap b = (Bitmap)ic.ToBitmap().Clone();
-                            b.Save(WorkPath + "update.ico", System.Drawing.Imaging.ImageFormat.Icon);
-                            infor.IcoName = "update.ico";
+                            b.Save(WorkPath + "ClyLogo.ico", System.Drawing.Imaging.ImageFormat.Icon);
+                            infor.IcoName = "ClyLogo.ico";
                         }
                         shortcut.IconLocation = WorkPath + infor.IcoName;
                         // 保存，创建就成功了。
@@ -444,7 +447,6 @@ namespace ClyUpdateClient
                 btn_OK.Text = "启动";
                 btn_OK.Enabled = false;
                 lbl_Error.Visible = false;
-                lbl_Wait.Visible = true;
                 lbl_Size.Text = "大小:0MB/0MB";
                 lbl_SUM.Text = "文件：0/0";
                 dgvDownLoad.Rows.Clear();
